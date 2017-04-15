@@ -105,7 +105,7 @@ describe('Calculator', function() {
       expect(result).to.be.equal(2.1);
     });
 
-    it.skip('should return -42 when -11.2-30.8 given', function() {
+    it('should return -42 when -11.2-30.8 given', function() {
       const result = subject.calculate('-11.2-30.8');
       expect(result).to.be.equal(-42);
     });

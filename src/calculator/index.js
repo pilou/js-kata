@@ -47,7 +47,8 @@ class Calculator {
   }
 
   _breakDownToNumbersAndOperators(array) {
-    const operatorsPattern = new RegExp(`([${this._getEscapedOperators()}])`);
+    const beforeOperatorPattern = '([-]?(?:[0-9a-z]*\\.[0-9a-z]+|[0-9a-z]+))';
+    const operatorsPattern = new RegExp(`${beforeOperatorPattern}([${this._getEscapedOperators()}])`);
     return _.flatten(array.map(a => a.split(operatorsPattern).filter(e => e)));
   }
 
