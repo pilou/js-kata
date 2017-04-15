@@ -52,8 +52,13 @@ class Calculator {
   }
 
   _getPattern(operators) {
-    const escapedOperators = operators.map(o => `\\${o}`);
-    return new RegExp(`([0-9.]+)([${escapedOperators}])([0-9.]+)`);
+    const operandPattern = '([-]?(?:[0-9a-z]*\\.[0-9a-z]+|[0-9a-z]+))';
+    const escapedOperators = this._getEscapedOperators(operators);
+    return new RegExp(`${operandPattern}([${escapedOperators}])${operandPattern}`);
+  }
+
+  _getEscapedOperators(operators) {
+    return operators.map(o => `\\${o}`).join('');
   }
 
   _replace(match, d1, operator, d2) {
