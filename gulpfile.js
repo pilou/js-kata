@@ -21,7 +21,12 @@ gulp.task('eslint:code', () => {
 gulp.task('eslint', ['eslint:tests', 'eslint:code']);
 
 gulp.task('mochaTest', () => {
-  return gulp.src('src/**/*.spec.js', { read: false }).pipe(mocha({ reporter: 'dot' }));
+  return gulp
+      .src('src/**/*.spec.js', { read: false })
+      .pipe(mocha({
+        reporter: 'dot',
+        compilers: ['js:babel-core/register']
+      }));
 });
 
 gulp.task('watch', ['test'], () => {

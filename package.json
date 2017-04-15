@@ -13,9 +13,11 @@
   "author": "pilou, wilzi",
   "license": "ISC",
   "devDependencies": {
+    "babel-preset-es2015": "6.24.1",
     "chai": "3.5.0",
     "eslint": "3.19.0",
     "gulp": "3.9.1",
+    "gulp-babel": "6.1.2",
     "gulp-eslint": "3.0.1",
     "gulp-mocha": "4.3.0",
     "gulp-watch": "4.3.11",
