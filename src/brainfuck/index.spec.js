@@ -6,7 +6,7 @@
 
 const Brainfuck = require('./index');
 
-describe.skip('Brainfuck', function() {
+describe('Brainfuck', function() {
 
   let subject;
 
