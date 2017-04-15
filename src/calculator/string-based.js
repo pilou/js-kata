@@ -62,7 +62,15 @@ class Calculator {
   }
 
   _replace(match, d1, operator, d2) {
+    this._validateOperand(d1);
+    this._validateOperand(d2);
     return operators[operator].calculus(parseFloat(d1), parseFloat(d2));
+  }
+
+  _validateOperand(str) {
+    if (parseFloat(str) != str) {
+      throw Error(`${str} is not a number`);
+    }
   }
 
   static create() {
