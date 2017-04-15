@@ -1,4 +1,5 @@
 'use strict';
 
-const Calculator = require('string-based');
+import Calculator from 'string-based';
+
 module.exports = Calculator;

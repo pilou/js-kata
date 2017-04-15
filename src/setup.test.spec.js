@@ -1,6 +1,6 @@
 'use strict';
 
-const chai = require('chai');
+import chai from 'chai';
 
 beforeEach(function() {
   global.expect = chai.expect;

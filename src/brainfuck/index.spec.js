@@ -4,7 +4,7 @@
 // when . character reached it should return with the ASCII character of memory value
 // when 256 memory value reached it should restart from 0
 
-const Brainfuck = require('./index');
+import Brainfuck from './index';
 
 describe('Brainfuck', function() {
 

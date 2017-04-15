@@ -1,7 +1,7 @@
 'use strict';
 
-const Calculator = require('./string-based');
-const tests = require('./shared-tests');
+import Calculator from './array-based';
+import tests from './shared-tests';
 
 describe('String based Calculator', function() {
 

@@ -1,9 +1,9 @@
 'use strict';
 
-const _ = require('lodash');
+import _ from 'lodash';
 
-const mathSymbols = require('./math-symbols');
-const operators = require('./operators');
+import mathSymbols from './math-symbols';
+import operators from './operators';
 
 class Calculator {
   constructor() {
