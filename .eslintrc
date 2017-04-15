@@ -11,6 +11,9 @@
     "expect": true
   },
   "plugins": [],
+  "parserOptions": {
+    "sourceType": "module"
+  },
   "rules": {
     "no-unused-expressions": 0,
     "no-unused-vars": [2, { "vars": "all", "args": "after-used" }],
